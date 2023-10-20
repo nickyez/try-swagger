@@ -17,13 +17,13 @@
   <script>
     window.onload = () => {
       window.ui = SwaggerUIBundle({
-        url: document.location.origin + "/json/api.json",
+        url: document.location.origin + "/json/reqres.json",
         dom_id: '#swagger-ui',
         presets: [
           SwaggerUIBundle.presets.apis,
           SwaggerUIStandalonePreset
         ],
-        layout: "StandaloneLayout",
+        // layout: "StandaloneLayout",
       });
     };
   </script>

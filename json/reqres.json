@@ -1,0 +1,73 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Mentoring - Api documentation",
+    "description": "API ini memandu pengguna dalam menggunakan Swagger untuk mendokumentasikan API secara efisien. Pengguna dapat belajar konfigurasi dasar, penjelasan endpoint, parameter, dan respons yang diharapkan. API menyediakan contoh penggunaan sebagai panduan awal. Disarankan untuk memahami konsep dasar Swagger dan merujuk ke dokumentasi resmi untuk kasus penggunaan kompleks. Dikembangkan oleh Nicky Erlangga. Hubungi @nickyerlangga untuk informasi lebih lanjut.",
+    "version": "1.0.0"
+  },
+  "host": "reqres.in",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "tags": [
+    {
+      "name": "Users",
+      "description": "API untuk mengambil data pengguna"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "List pengguna",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        },
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Untuk pindah halaman",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Ambil data pengguna berdasarkan id pengguna",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "404": {
+            "description": "users not found"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "id pengguna",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  }
+}
